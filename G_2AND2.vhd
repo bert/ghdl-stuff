@@ -3,20 +3,20 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-  entity G_2AND2 is
-    Port
-    (
-      AN : In std_logic;
-      BN : In std_logic;
-      Y : Out std_logic
-    );
-  end G_2AND2;
+entity G_2AND2 is
+  port
+  (
+    AN : In std_logic;
+    BN : In std_logic;
+    Y : Out std_logic
+  );
+end G_2AND2;
 
 library ieee;
 use ieee.std_logic_1164.all;
-  architecture behavioral of G_2AND2 is
-    begin
-      Y <= not(AN) and not(BN);
-    end behavioral;
+architecture behavioral of G_2AND2 is
+begin
+  Y <= not (AN) and not (BN);
+end behavioral;
 
 -- EOF
