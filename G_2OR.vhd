@@ -3,20 +3,20 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-  entity G_2OR is
-    Port
-    (
-      A : In std_logic;
-      B : In std_logic;
-      Y : Out std_logic
-    );
-  end G_2OR;
+entity G_2OR is
+  port
+  (
+    A : In std_logic;
+    B : In std_logic;
+    Y : Out std_logic
+  );
+end G_2OR;
 
 library ieee;
 use ieee.std_logic_1164.all;
-  architecture behavioral of G_2OR is
-    begin
-      Y <= A or B;
-    end behavioral;
+architecture behavioral of G_2OR is
+begin
+  Y <= A or B;
+end behavioral;
 
 -- EOF
