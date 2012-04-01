@@ -3,21 +3,21 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-  entity G_3OR2 is
-    Port
-    (
-      C : In std_logic;
-      AN : In std_logic;
-      BN : In std_logic;
-      Y : Out std_logic
-    );
-  end G_3OR2;
+entity G_3OR2 is
+  port
+  (
+    C : In std_logic;
+    AN : In std_logic;
+    BN : In std_logic;
+    Y : Out std_logic
+  );
+end G_3OR2;
 
 library ieee;
 use ieee.std_logic_1164.all;
-  architecture behavioral of G_3OR2 is
-    begin
-      Y <= not (AN) or not (BN) or C;
-    end behavioral;
+architecture behavioral of G_3OR2 is
+begin
+  Y <= not (AN) or not (BN) or C;
+end behavioral;
 
 -- EOF
