@@ -24,39 +24,39 @@ end G_MUX81;
 library ieee;
 use ieee.std_logic_1164.all;
 architecture behavioral of G_MUX81 is
+begin
+  P1: process (A,B,C,D,E,F,G,H,S2, S1, S0)
   begin
-    P1: process (A,B,C,D,E,F,G,H,S2, S1, S0)
-    begin
-      if S2 = '0' then
-        if S1 = '0' then   
-          if S0 = '0' then   
-            Y <= A;
-          elsif S0 = '1' then 
-            Y <= B;
-          end if;
-        elsif S1 = '1' then
-          if S0 = '0' then   
-            Y <= C;
-          elsif S0 = '1' then 
-            Y <= D;
-          end if;
+    if S2 = '0' then
+      if S1 = '0' then   
+        if S0 = '0' then   
+          Y <= A;
+        elsif S0 = '1' then 
+          Y <= B;
         end if;
-      elsif S2 = '1' then
-        if S1 = '0' then   
-          if S0 = '0' then   
-            Y <= E;
-          elsif S0 = '1' then 
-            Y <= F;
-          end if;
-        elsif S1 = '1' then
-          if S0 = '0' then   
-            Y <= G;
-          elsif S0 = '1' then 
-            Y <= H;
-          end if;
+      elsif S1 = '1' then
+        if S0 = '0' then   
+          Y <= C;
+        elsif S0 = '1' then 
+          Y <= D;
         end if;
       end if;
-    end process P1;
-  end behavioral;
+    elsif S2 = '1' then
+      if S1 = '0' then   
+        if S0 = '0' then   
+          Y <= E;
+        elsif S0 = '1' then 
+          Y <= F;
+        end if;
+      elsif S1 = '1' then
+        if S0 = '0' then   
+          Y <= G;
+        elsif S0 = '1' then 
+          Y <= H;
+        end if;
+      end if;
+    end if;
+  end process P1;
+end behavioral;
 
 -- EOF
