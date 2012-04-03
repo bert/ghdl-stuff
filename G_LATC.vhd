@@ -17,7 +17,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 architecture behavioral of G_LATC is
 begin
-  process(C,E,D)
+  process (C, E, D)
   begin
     if C = '1' then
       Q <= '0';
