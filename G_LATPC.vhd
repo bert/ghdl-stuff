@@ -18,15 +18,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 architecture behavioral of G_LATPC is
 begin
-  process(C,P,E,D)
-    begin
-      if C = '1' then
-        Q <= '0';
-      elsif P = '1' then
-        Q <= '1';
-      elsif E = '1' then
-        Q <= D;
-      end if;
+  process (C, P, E, D)
+  begin
+    if C = '1' then
+      Q <= '0';
+    elsif P = '1' then
+      Q <= '1';
+    elsif E = '1' then
+      Q <= D;
+    end if;
   end process;
 end behavioral;
 
