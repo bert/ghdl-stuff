@@ -16,9 +16,9 @@ end G_MUX21;
 library ieee;
 use ieee.std_logic_1164.all;
 architecture behavioral of G_MUX21 is
-  begin
-    Y <= (A and (not S)) or (B and S) ; 
-  end behavioral;
+begin
+  Y <= (A and (not S)) or (B and S) ; 
+end behavioral;
 
 
 -- EOF
