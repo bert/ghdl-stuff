@@ -9,7 +9,7 @@ entity G_FADD is
     A: in std_logic;
     B: in std_logic;
     CI: in std_logic;
-    SUM out std_logic;
+    SUM: out std_logic;
     CO: out std_logic
   );
 end G_FADD;
